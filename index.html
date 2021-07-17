@@ -6,22 +6,28 @@
     <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
     <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+
+
+
+
+
 <div class="main-container">
     <h1>Color picker</h1>
-    <div class="color-picker">
+    <div class="color-picker" >
         <div class="rgb-picker">
             <label for="red">Red</label>
-            <input type="number" id="red">
+            <input  type="number" value="153" min="0" max="255"  id="red">
         </div>
         <div class="rgb-picker">
             <label for="blue">Blue</label>
-            <input type="number" id="green">
+            <input type="number" value="153" min="0" max="255" id="green">
         </div>
         <div class="rgb-picker">
             <label for="green">Green</label>
-            <input type="number" id="blue">
+            <input type="number" value="153" min="0" max="255" id="blue">
         </div>
     </div>
     <p>HEX value: #......</p>
@@ -31,6 +37,18 @@
         <li>Green: ...</li>
         <li>Blue: ...</li>
     </ul>
+
+    <script> 
+        let redValue = document.getElementById('red').value
+        let blueValue = document.getElementById('blue').value
+        let greenValue = document.getElementById('green').value
+        
+        let body = document.getElementsByTagName('body')[0]
+        // document.addEventListener("change", document.body.style.backgroundColor = 'rgb(' + redValue + blueValue + greenValue + ')');
+        
+        document.body.style.backgroundColor = 'rgb(' + redValue + blueValue + greenValue + ')';
+    </script>
+
 </div>
 </body>
 </html>
